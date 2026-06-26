@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="portfolio-style.css">
+    
+    <!-- PDF Library Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <style>
+        .download-btn-container { position: fixed; bottom: 30px; right: 30px; z-index: 100; }
+        .download-btn { background-color: #3d312a; color: #ffffff; border: none; padding: 14px 24px; font-size: 1rem; font-weight: 600; border-radius: 30px; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+
+    <div id="portfolio-pdf-area">
+        <main class="hero-container" id="home">
+            <div class="profile-frame">
+                <div class="arch-bg-1"></div>
+                <div class="arch-bg-2"></div>
+                <img src="https://via.placeholder.com/400x500" alt="Profile" class="profile-img" id="output-photo">
+            </div>
+
+            <div class="hero-content">
+                <h1 class="main-title" id="output-role">DESIGN PHILOSOPHY</h1>
+                <h3 class="sub-title">The Mind Behind The Works</h3>
+                <p class="description" id="output-about"></p>
+                
+                <div style="margin-bottom: 20px; font-size: 0.95rem; line-height: 1.6;">
+                    <p><strong>⚡ Skills:</strong> <span id="output-skills"></span></p>
+                    <p><strong>📁 Projects:</strong> <span id="output-projects"></span></p>
+                    <p><strong>🎓 Education:</strong> <span id="output-education"></span></p>
+                    <p><strong>📞 Contact:</strong> <span id="output-contacts"></span> | <strong>GitHub:</strong> <span id="output-github"></span></p>
+                    <p><strong>📜 Certificate:</strong> <span id="output-certificate"></span></p>
+                </div>
+
+                <div class="presenter-tag">
+                    <span>Presented By:</span>
+                    <strong id="output-name"></strong>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="download-btn-container">
+        <button class="download-btn" onclick="downloadPDF()">📥 Download Portfolio</button>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('portfolio-pdf-area');
+            html2pdf().from(element).save('My_Portfolio.pdf');
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
