@@ -96,20 +96,7 @@ git clone https://github.com/your-username/portfolio-generator.git
 - Live portfolio sharing
 - AI-powered portfolio suggestions
 
----
-
-## 📸 Screenshots
-
-### Home Page
-(Add Home Page Screenshot)
-
-### Portfolio Form
-(Add Form Screenshot)
-
-### Generated Portfolio
-(Add Portfolio Screenshot)
-
----
+--
 
 ## 👩‍💻 Author
 
